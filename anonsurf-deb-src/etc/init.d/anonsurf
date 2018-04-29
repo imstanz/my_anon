@@ -29,9 +29,12 @@
 # useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
-#
 # You should have received a copy of the GNU General Public License
 # along with Parrot Security OS. If not, see <http://www.gnu.org/licenses/>.
+#
+# Cloned & hacked, from: https://github.com/Und3rf10w/kali-anonsurf
+# stanz changed/added: line 48-49,
+# stanz added palemoon: line 65, removed Parrot, added Stanz: line 302
 
 
 export BLUE='\033[1;94m'
@@ -44,7 +47,8 @@ TOR_EXCLUDE="192.168.0.0/16 172.16.0.0/12 10.0.0.0/8"
 
 # The UID Tor runs as
 # change it if, starting tor, the command 'ps -e | grep tor' returns a different UID
-TOR_UID="debian-tor"
+# orignal input: TOR_UID="debian-tor"
+TOR_UID="tor"
 
 # Tor's TransPort
 TOR_PORT="9040"
@@ -59,7 +63,7 @@ fi
 
 function init {
 	echo -e -n " $GREEN*$BLUE killing dangerous applications$RESETCOLOR\n"
-	killall -q chrome dropbox iceweasel skype icedove thunderbird firefox chromium xchat transmission deluge pidgin pidgin.orig
+	killall -q chrome dropbox iceweasel skype icedove thunderbird firefox palemoon chromium xchat transmission deluge pidgin pidgin.orig
 	
 	echo -e -n " $GREEN*$BLUE cleaning some dangerous cache elements"
 	bleachbit -c adobe_reader.cache chromium.cache chromium.current_session chromium.history elinks.history emesene.cache epiphany.cache firefox.url_history flash.cache flash.cookies google_chrome.cache google_chrome.history  links2.history opera.cache opera.search_history opera.url_history &> /dev/null
@@ -296,7 +300,7 @@ case "$1" in
 	;;
    *)
 echo -e "
-Parrot AnonSurf Module
+Stanz AnonSurf Module
 	Usage:
 	$RED┌──[$GREEN$USER$YELLOW@$BLUE`hostname`$RED]─[$GREEN$PWD$RED]
 	$RED└──╼ \$$GREEN"" anonsurf $RED{$GREEN""start$RED|$GREEN""stop$RED|$GREEN""restart$RED|$GREEN""change$RED""$RED|$GREEN""status$RED""}
