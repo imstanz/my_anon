@@ -33,7 +33,6 @@
 # along with Parrot Security OS. If not, see <http://www.gnu.org/licenses/>.
 #
 # Cloned & hacked, from: https://github.com/Und3rf10w/kali-anonsurf
-# stanz changed/added: line 48-49,
 # stanz added palemoon: line 65, removed Parrot, added Stanz: line 302
 
 
@@ -47,8 +46,7 @@ TOR_EXCLUDE="192.168.0.0/16 172.16.0.0/12 10.0.0.0/8"
 
 # The UID Tor runs as
 # change it if, starting tor, the command 'ps -e | grep tor' returns a different UID
-# orignal input: TOR_UID="debian-tor"
-TOR_UID="tor"
+TOR_UID="debian-tor"
 
 # Tor's TransPort
 TOR_PORT="9040"
