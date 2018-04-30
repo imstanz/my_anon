@@ -11,23 +11,26 @@ This repo can & does, compile & build, a ".deb" package, to correctly install it
 
 +++ NOTE: This may work with any debian/devuan/ubuntu system, but this has only been tested to work on a:
  "Kali-rolling amd64" system & a "Devuan ascii amd64" system.
+ 
 ++ It is advised not to download the ".zip" file, but instead to install "git", & use: "git clone". ++
 
-user@mypc:~$ git clone
+user@mypc:~$ git clone https://git.devuan.org/stanz/my_anon.git
+
+It may also be best - to install the "tor" package, before continuing.
 
 ========================================================================
 
-The easiest way to get this working is to run the installer.
+The easiest way to get this installed/built & working is to run the installer.
 
 === Installation ===
 
-Open your terminal of choice and enter the anonsurf folder.
+Open your terminal of choice and enter the newly created/cloned "my_anon" folder.
 
-user@mypc:~$ cd anonsurf
+user@mypc:~$ cd my_anon
 
-user@mypc:~/anonsurf$
+user@mypc:~/my_anon$
 
-user@mypc:~/anonsurf$ sudo bash ./installer.sh ("This script must be ran as root")
+user@mypc:~/my_anon$ sudo bash ./installer.sh ("This script must be ran as root")
 
 The installer will take care of installing i2p, & all dependencies. Watch for any errors concerning packages
 not found or installable. Issues can be posted on GitLab, for quickest response/fix.
@@ -41,7 +44,7 @@ example : "user@mypc:sudo anonsurf start".
 
 Anonsurf Usage:
 
- anonsurf {start|stop|restart|change|status}
+ ~$ anonsurf {start|stop|restart|change|status}
 
  start - Start system-wide anonymous tunneling under TOR proxy through iptables
           
@@ -52,10 +55,20 @@ Anonsurf Usage:
  change - Changes identity restarting TOR
  
  status - Check if AnonSurf is working properly
+ 
+
+++ Be prepared for 1st run failure. Confirm success/failure, by checking your ip addy at: http://start.parrotsec.org/
+
+
+If ip is your real ip, use: ~$ anonsurf restart
+
+
+++ Not starting the "tor daemon" seems to be first fail, but done with restart.
+
 
 i2p Usage:
 
- anonsurf {starti2p|stopi2p}
+ ~$ anonsurf {starti2p|stopi2p}
 
 ----[ I2P related features ]----
 
@@ -65,7 +78,7 @@ i2p Usage:
 
 Pandora Usage:
 
-In terminal: "user@mypc: sudo bash pandora bomb"
+In terminal: "user@mypc:~$ sudo bash pandora bomb"
 
 Pandora automatically overwrites the RAM when the system is shutting down.
 
