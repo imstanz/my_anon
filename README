@@ -7,7 +7,8 @@ tested to work on:
 ++ How to use this package repositorie ++
 
 This repo contains the sources of both the anonsurf and pandora packages from "ParrotSec"  
-combined into one. Modifications have been made to use the DNS servers of Private Internet Access   (instead of FrozenDNS), and fixes for users who don't use the resolvconf application.  
+combined into one. Modifications have been made to use the DNS servers of Private Internet Access (instead of FrozenDNS),
+and fixes for users who don't use the resolvconf application.  
 
 == Removed gui and iceweasel in ram, added palemoon to kill/restart. ==  
 This repo can, compile & build, a ".deb" package, to correctly install it on a Debian-Based system.  
