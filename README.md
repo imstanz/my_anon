@@ -13,14 +13,15 @@ combined into one. Modifications have been made to use the DNS servers of Privat
 This repo can, compile & build, a ".deb" package, to correctly install it on a Debian-Based system.  
 
 ++ It is advised not to download the ".zip" file, but instead to install "git", & use: "git clone". ++  
+
 user@mypc:~$ git clone https://git.devuan.org/stanz/my_anon.git  
-========================================================================
+
 It helps to insure you have afew packages allready installed:  
 Build-Depends: debhepler (>= 10)  
 Depends: bash, secure-delete, tor, iptables, i2p  
 Recommends: onioncircuits, connect-proxy, onionshare, torsocks, tor-geoipdb, gtkdialog, socat, gufw, proxychains  
 Suggests: gnunet-gtk, gnunet, vidalia  
-==================================================
+
 The easiest way to get this working is to run the installer.  
 == Installation ==  
 Open your terminal of choice and enter the anonsurf folder.  
