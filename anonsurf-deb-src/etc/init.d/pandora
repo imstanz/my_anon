@@ -8,7 +8,7 @@ set -e
 # Should-Stop:          halt reboot
 # Default-Start:        2 3 4 5
 # Default-Stop:         0 1 6
-# Short-Description: Open Parrot Pandora's box and clean the RAM.
+# Short-Description: Open Pandora's box and clean the RAM.
 ### END INIT INFO
 
 #
@@ -18,7 +18,7 @@ set -e
 #
 
 function bomb {
-	echo "starting Parrot Pandora's box "
+	echo "Starting Pandora's box "
 	sleep 5
     echo "Pandora is dropping caches"
     echo 1024 > /proc/sys/vm/min_free_kbytes
