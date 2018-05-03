@@ -1,0 +1,13 @@
+Package: anonsurf
+Version: 1.0
+Architecture: all
+Section: network
+Priority: optional
+Maintainer: stanz <rypedgenes@protonmail.com>
+Homepage: https://git.devuan.org/stanz/
+
+Build-Depends: debhepler (>= 10)
+Depends: secure-delete, tor, iptables, i2p
+Recommends: onioncircuits, connect-proxy, onionshare, torsocks, tor-geoipdb, gtkdialog, socat, gufw, proxychains
+Suggests: gnunet-gtk, gnunet, vidalia
+Description: Parrot stealth and anon scripts, ported to work with Kali & Devuan Linux.
