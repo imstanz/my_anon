@@ -7,24 +7,24 @@ tested to work on:
 ++ How to use this package repositorie ++
 
 This repo contains the sources of both the anonsurf and pandora packages from "ParrotSec"  
-combined into one. Modifications have been made to use the DNS servers of Private Internet Access (instead of FrozenDNS),
-and fixes for users who don't use the resolvconf application.  
+combined into one.
+Modifications have been made to use the DNS servers of Private Internet Access (instead of FrozenDNS),
+and code fixes, for users who don't use the resolvconf application.  
 
 == Removed gui and iceweasel in ram, added palemoon to kill/restart. ==  
 This repo can, compile & build, a ".deb" package, to correctly install it on a Debian-Based system.  
 
 ++ It is advised not to download the ".zip" file, but instead to install "git", & use: "git clone". ++  
-
 user@mypc:~$ git clone https://git.devuan.org/stanz/my_anon.git  
 
-It helps to insure you have afew packages allready installed:  
+It might help to insure you have afew packages allready installed:  
 Build-Depends: debhepler (>= 10)  
 Depends: bash, secure-delete, tor, iptables, i2p  
-Recommends: onioncircuits, connect-proxy, onionshare, torsocks, tor-geoipdb, gtkdialog, socat, gufw, proxychains  
+Recommends: onioncircuits, connect-proxy, onionshare, torsocks, tor-geoipdb, gtkdialog, socat,
+gufw, proxychains, curl
 Suggests: gnunet-gtk, gnunet, vidalia  
 
-The easiest way to get this working is to run the installer.  
-== Installation ==  
+== Installation: run the installer. ==  
 Open your terminal of choice and enter the anonsurf folder.  
 user@mypc:~$ cd anonsurf  
 user@mypc:~/anonsurf$  
@@ -35,7 +35,7 @@ Watch for any errors concerning packages not found or installable.
 Issues can be posted on GitLab, for quickest response/fix.  
 Once the installer is complete, with no errors, you will be able to use "anonsurf, i2p, and pandora" modules.  
 
-+++ Anonsurf will anonymize the entire system under "tor" using "IPTables".  
++++ Anonsurf will anonymize the entire system under "tor" using "iptables".  
 
 +++ NOTE: DO NOT run this as "service anonsurf $COMMAND", instead use "anonsurf $COMMAND".  
 example : "user@mypc:sudo anonsurf start".  
@@ -52,7 +52,7 @@ Anonsurf Usage:
  
  change - Changes identity restarting TOR  
  
- status - Check if AnonSurf is working properly  
+ status - Check if AnonSurf is working properly
 
 i2p Usage:  
 
@@ -62,12 +62,11 @@ i2p Usage:
 
  starti2p - Start i2p services  
  
- stopi2p - Stop i2p services  
+ stopi2p - Stop i2p services
 
 Pandora Usage:  
 
 In terminal: "user@mypc: sudo bash pandora bomb"  
 
 Pandora automatically overwrites the RAM when the system is shutting down.  
-
 +++ NOTE: This will clear the entire system cache, including active SSH tunnels or sessions.  
